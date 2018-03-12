@@ -14,7 +14,7 @@ import static org.fusesource.jansi.Ansi.ansi;
 public class ForegroundDefault extends AbstractFunction implements UserDefinedFunction {
 
     public ForegroundDefault() {
-        super(1, ConsoleVocabulary.foregroundDefault.stringValue());
+        super(0, ConsoleVocabulary.foregroundDefault.stringValue());
     }
 
     public ForegroundDefault(final ForegroundDefault foreground) {

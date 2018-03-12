@@ -15,7 +15,7 @@ import static org.fusesource.jansi.Ansi.ansi;
 public class BoldOff extends AbstractFunction implements UserDefinedFunction {
 
     public BoldOff() {
-        super(1, ConsoleVocabulary.boldOff.stringValue());
+        super(0, ConsoleVocabulary.boldOff.stringValue());
     }
 
     public BoldOff(final BoldOff boldOn) {

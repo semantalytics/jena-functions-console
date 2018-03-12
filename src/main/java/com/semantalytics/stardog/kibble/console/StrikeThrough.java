@@ -9,6 +9,8 @@ import org.fusesource.jansi.Ansi;
 import org.fusesource.jansi.Ansi.Attribute;
 import org.openrdf.model.Value;
 
+import java.util.stream.Stream;
+
 import static com.complexible.common.rdf.model.Values.literal;
 import static org.fusesource.jansi.Ansi.Attribute.*;
 import static org.fusesource.jansi.Ansi.Color;
@@ -28,9 +30,9 @@ public class StrikeThrough extends AbstractFunction implements UserDefinedFuncti
     protected Value internalEvaluate(final Value... values) throws ExpressionEvaluationException {
         final Ansi ansi = ansi();
         ansi.a(STRIKETHROUGH_ON);
-        for (final Value value : values) {
-            ansi.a(value.stringValue());
-        }
+
+        Stream.of(values).forEach(v -> ansi.a(v.stringValue()));
+
         if(values.length != 0) {
             ansi.a(STRIKETHROUGH_OFF);
         }

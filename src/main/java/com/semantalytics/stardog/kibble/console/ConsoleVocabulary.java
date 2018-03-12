@@ -41,10 +41,6 @@ public enum ConsoleVocabulary {
     foregroundRed,
     foregroundWhite,
     foregroundYellow,
-    intensityBold,
-    intensityBoldOff,
-    intensityBoldOn,
-    intensityFaint,
     italic,
     italicOff,
     negative,
@@ -62,6 +58,10 @@ public enum ConsoleVocabulary {
 
     ConsoleVocabulary() {
         iri = StardogValueFactory.instance().createIRI(NAMESPACE, name());
+    }
+
+    public static String sparqlPrefix(String prefixName) {
+        return "PREFIX " + prefixName + ": <" + NAMESPACE + "> ";
     }
 
     public String stringValue() {

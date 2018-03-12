@@ -9,6 +9,7 @@ import org.fusesource.jansi.Ansi;
 import org.openrdf.model.Value;
 
 import java.util.Arrays;
+import java.util.stream.Stream;
 
 import static com.complexible.common.rdf.model.Values.literal;
 import static org.fusesource.jansi.Ansi.Color.*;
@@ -29,7 +30,7 @@ public class BackgroundBlack extends AbstractFunction implements UserDefinedFunc
         final Ansi ansi = ansi();
         ansi.bg(BLACK);
 
-        Arrays.stream(values).forEach(v -> ansi.a(v.stringValue()));
+        Stream.of(values).forEach(v -> ansi.a(v.stringValue()));
 
         if(values.length != 0) {
             ansi.bg(DEFAULT);

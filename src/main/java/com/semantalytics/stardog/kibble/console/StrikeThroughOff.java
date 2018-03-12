@@ -20,7 +20,7 @@ import static org.fusesource.jansi.Ansi.ansi;
 public class StrikeThroughOff extends AbstractFunction implements UserDefinedFunction {
 
     public StrikeThroughOff() {
-        super(Range.all(), ConsoleVocabulary.strikeThroughOff.stringValue());
+        super(0, ConsoleVocabulary.strikeThroughOff.stringValue());
     }
 
     public StrikeThroughOff(final StrikeThroughOff console) {

@@ -19,7 +19,7 @@ import static org.fusesource.jansi.Ansi.ansi;
 public class UnderlineOff extends AbstractFunction implements UserDefinedFunction {
 
     public UnderlineOff() {
-        super(Range.all(), ConsoleVocabulary.underlineOff.stringValue());
+        super(0, ConsoleVocabulary.underlineOff.stringValue());
     }
 
     public UnderlineOff(final UnderlineOff console) {
