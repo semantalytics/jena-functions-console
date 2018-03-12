@@ -27,7 +27,7 @@
     <scm>
         <url>http://github.com/semantalytics.com/stardog-kibbles</url>
         <tag>HEAD</tag>
-        <connection>scm:git:http://github.com/semantalytics-stardog/kibbles-console`</connection>
+        <connection>scm:git:http://github.com/semantalytics-stardog/kibbles-console</connection>
         <developerConnection>scm:git:http://github.com/semantalytics-stardog/kibbles-console</developerConnection>
     </scm>
 
@@ -149,7 +149,7 @@
                 <version>2.12.4</version>
                 <configuration>
                     <excludes>
-                        <exclude>**/*</exclude>
+                        <exclude>**/Test*</exclude>
                     </excludes>
                     <includes>
                         <include>**/ConsoleTestSuite.java</include>
