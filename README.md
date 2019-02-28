@@ -1,15 +1,14 @@
-[![Build Status](https://travis-ci.org/semantalytics/stardog-kibbles.svg?branch=master)](https://travis-ci.org/semantalytics/stardog-kibbles)
+[![Build Status](https://travis-ci.org/semantalytics/jena-functions-console.svg?branch=master)](https://travis-ci.org/semantalytics/jena-functions-console)
 
-# Stardog Kibbles
+# Jena functions - Console
 
-A collection of [Stardog](http://stardog.com) plugins for writing ANSI console escape codes
+A collection of [Jena](http://jena.apache.org) plugins for writing ANSI console escape codes
 
-Namespace: http://semantalytics.com/2017/09/ns/stardog/kibble/console/
+Namespace: http://semantalytics.com/2017/09/ns/jena/function/console/
 
 Suggested prefixes: c: , cons:, console:
 
 Functions:
-
 
     backgroundBlack
     backgroundBlue
@@ -58,6 +57,3 @@ Functions:
     underline
     underlineDouble
     underlineOff
-
-
-

@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.semantalytics.stardog</groupId>
-    <artifactId>kibbles-console</artifactId>
+    <groupId>com.semantalytics.jena.functions</groupId>
+    <artifactId>console</artifactId>
     <version>1.0.0</version>
 
     <developers>
@@ -24,42 +24,19 @@
         </developer>
     </developers>
 
-    <scm>
-        <url>http://github.com/semantalytics.com/stardog-kibbles</url>
-        <tag>HEAD</tag>
-        <connection>scm:git:http://github.com/semantalytics-stardog/kibbles-console</connection>
-        <developerConnection>scm:git:http://github.com/semantalytics-stardog/kibbles-console</developerConnection>
-    </scm>
-
-    <licenses>
-        <license>
-            <name>MIT</name>
-            <url>https://opensource.org/licenses/Apache-2.0</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
     <organization>
         <name>Semantalytics</name>
         <url>http://www.semantalytics.com</url>
     </organization>
 
     <properties>
-        <stardog.major.version>5</stardog.major.version>
-        <stardog.version>${stardog.major.version}.2.1</stardog.version>
         <junit.version>4.12</junit.version>
         <slf4j.version>1.7.21</slf4j.version>
         <jansi.version>1.16</jansi.version>
+        <jena.version>3.5.0</jena.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.complexible.stardog</groupId>
-            <artifactId>server</artifactId>
-            <version>${stardog.version}</version>
-            <type>pom</type>
-            <scope>provided</scope>
-        </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
@@ -77,18 +54,14 @@
             <artifactId>jansi</artifactId>
             <version>${jansi.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.jena</groupId>
+            <artifactId>jena-arq</artifactId>
+            <version>${jena.version}</version>
+        </dependency>
     </dependencies>
 
-    <repositories>
-        <repository>
-            <id>stardog-maven-repo</id>
-            <name>Stardog Maven Repo</name>
-            <url>http://maven.stardog.com</url>
-        </repository>
-    </repositories>
-
     <build>
-        <finalName>${project.artifactId}-${project.version}-sd${stardog.major.version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
